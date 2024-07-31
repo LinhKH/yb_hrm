@@ -1,0 +1,85 @@
+
+.error {
+    color: red;
+    width: 100%;
+    font-weight: 400 !important;    
+    font-size: 16px;
+    display:block;
+}
+
+.response-message{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10000;
+}
+
+.form-control {
+    color: #495057;
+}
+
+.att-checkbox {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    /* margin: 0 auto; */
+}
+
+.att-checkbox input[type=checkbox] {
+    margin: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+}
+
+.att-checkbox label {
+    height: 100%;
+    border-radius: 4px;
+    display: block;
+    perspective: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.att-checkbox label:before,
+.att-checkbox label:after {
+    content: 'A';
+    color: #fff;
+    background: #ce1212;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    transform: rotateY(0deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease;
+}
+
+.att-checkbox label:after {
+    content: 'P';
+    background: #588101;
+    transform: rotateY(-180deg);
+    left: 0;
+    z-index: -1;
+}
+
+.att-checkbox input[type=checkbox]:checked+label:before {
+    transform: rotateY(180deg);
+}
+
+.att-checkbox input[type=checkbox]:checked+label:after {
+    transform: rotateY(0deg);
+    z-index: 1;
+}
+
+@media only screen and (max-width:767px) {
+    .checkbox {
+        margin: 0 0 20px;
+    }
+}
+
